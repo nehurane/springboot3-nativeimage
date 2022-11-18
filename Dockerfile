@@ -11,7 +11,7 @@ RUN \
     source "$HOME/.sdkman/bin/sdkman-init.sh"; \
     ## Install Gradle
     sdk install gradle; \
-    gradle nativeCompile
+    ./gradlew nativeCompile
 
 FROM container-registry.oracle.com/os/oraclelinux:8-slim
 
