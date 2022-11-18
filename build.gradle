@@ -30,3 +30,10 @@ graalvmNative {
 	}
 	toolchainDetection = false
 }
+
+/**graal {
+	mainClass project.mainClassName
+	outputName 'spring-native'
+	option '-H:+ReportExceptionStackTraces'
+	option '--static'
+}**/
