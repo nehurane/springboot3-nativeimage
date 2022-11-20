@@ -31,9 +31,7 @@ graalvmNative {
 	toolchainDetection = false
 }
 
-/**graal {
-	mainClass project.mainClassName
-	outputName 'spring-native'
-	option '-H:+ReportExceptionStackTraces'
-	option '--static'
-}**/
+bootBuildImage {
+	builder = 'dashaun/java-native-builder-arm64:7.37.0'
+	environment = ['BP_NATIVE_IMAGE': 'true']
+}

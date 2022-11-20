@@ -18,6 +18,6 @@ FROM container-registry.oracle.com/os/oraclelinux:8-slim
 EXPOSE 8080
 
 # # For Gradle build
-COPY --from=graalvm build/native/nativeCompile/nativeimage native-app
+COPY --from=graalvm /home/app/build/native/nativeCompile/nativeimage native-app
 
 ENTRYPOINT ["/native-app"]
