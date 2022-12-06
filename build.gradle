@@ -32,6 +32,9 @@ graalvmNative {
 }
 
 bootBuildImage {
+	//add('-H:+StaticExecutableWithDynamicLibC')
 	builder = 'dashaun/java-native-builder-arm64:7.37.0'
-	environment = ['BP_NATIVE_IMAGE': 'true']
+	environment = ['BP_NATIVE_IMAGE': 'true',
+				   'BP_BINARY_COMPRESSION_METHOD' : 'upx'
+	]
 }
